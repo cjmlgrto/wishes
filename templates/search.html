@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+	<title>Wishes - Search</title>
+	<meta charset="utf-8"/>
+	<meta name="theme-color" content="#43BF77">
+	<meta name="viewport" content="width=device-width,initial-scale=1"/>
+	<link rel="stylesheet" href="{{ url_for('static', filename= 'style.css') }}"/>
+	<link rel="apple-touch-icon" href="{{ url_for('static', filename= 'assets/favicon.png') }}">
+	
+	<body>
+		<header>
+			<a href="/" class="half navigate">Families</a>
+			<form action="/search" method="POST" class="half search">
+				<input type="text" onchange="this.form.submit()" name="query" placeholder="Search" class="box">
+			</form>
+		</header>
+
+		<section>
+			<h1>Results</h1>
+		</section>
+
+		<section>
+			{% if found %}
+			<ul class="members">
+				{% for member in members %}
+				<li><a href="/{{ member[1].replace(' ','-').lower() }}/{{ member[0].lower() }}">{{ member[0] }}</a></li>
+				{% endfor %}
+			</ul>
+			{% else %}
+			<p>Nothing found for “{{ query }}”</p>
+			{% endif %}
+
+		</section>
+
+	</body>
+</html>

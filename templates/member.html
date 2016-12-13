@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+	<title>Wishes - {{ member }}</title>
+	<meta charset="utf-8"/>
+	<meta name="theme-color" content="#43BF77">
+	<meta name="viewport" content="width=device-width,initial-scale=1"/>
+	<link rel="stylesheet" href="{{ url_for('static', filename= 'style.css') }}"/>
+	<link rel="apple-touch-icon" href="{{ url_for('static', filename= 'assets/favicon.png') }}">
+	
+	<body>
+		<header>
+			<a href="/{{ group }}" class="half navigate">{{ group.replace('-',' ').title() }}</a>
+			<form action="/search" method="POST" class="half search">
+				<input type="text" onchange="this.form.submit()" name="query" placeholder="Search" class="box">
+			</form>
+		</header>
+
+		<section>
+			<h1>{{ member }}</h1>
+		</section>
+
+		<section class="metrics">
+			<a href="/edit/{{ group }}/{{ member.lower() }}" class="edit">Edit</a>
+			<div class="metric">
+				<span class="value">{{ metrics[0] }}</span>
+				<span>Shirt</span>
+			</div>
+			<div class="metric">
+				<span class="value">{{ metrics[1] }}</span>
+				<span>Pants</span>
+			</div>
+			<div class="metric">
+				<span class="value">{{ metrics[2] }}</span>
+				<span>Shoes</span>
+			</div>
+		</section>
+
+		<section>
+			<ul class="wishlist">
+				{% if wishlist %}
+					{% for item in wishlist %}
+					<li class="{% if item[:6] != '@done:' %}un{% endif %}checked">
+						<a href="/toggle/{{ group }}/{{ member.lower() }}/{{ item.replace('/','zzz') }}" class="toggle">O</a>
+						<span>{% if item[:6] == '@done:' %}{{ item[6:] }}{% else %}{{ item }}{% endif %}</span>
+					</li>
+					{% endfor %}
+				{% endif %}
+			</ul>
+
+		</section>
+
+	</body>
+</html>

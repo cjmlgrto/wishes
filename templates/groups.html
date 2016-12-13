@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+	<title>Wishes</title>
+	<meta charset="utf-8"/>
+	<meta name="theme-color" content="#43BF77">
+	<meta name="viewport" content="width=device-width,initial-scale=1"/>
+	<link rel="stylesheet" href="{{ url_for('static', filename= 'style.css') }}"/>
+	<link rel="apple-touch-icon" href="{{ url_for('static', filename= 'assets/favicon.png') }}">
+	
+	<body>
+		<header>
+			<a href="/" class="half logo">Wishes</a>
+			<form action="/search" method="POST" class="half search">
+				<input type="text" onchange="this.form.submit()" name="query" placeholder="Search" class="box">
+			</form>
+		</header>
+
+		<section>
+			{% for group in groups %}
+			<a href="/{{ group.replace(' ','-').lower() }}" class="half group">
+				<div class="tile">
+					<ul>
+						{% for member in groups[group] %}
+						<li>{{ member }}</li>
+						{% endfor %}
+					</ul>
+				</div>
+				<span>{{ group }}</span>
+			</a>
+			{% endfor %}
+		</section>
+
+	</body>
+</html>

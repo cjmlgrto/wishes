@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+	<title>Wishes - {{ member }}</title>
+	<meta charset="utf-8"/>
+	<meta name="theme-color" content="#43BF77">
+	<meta name="viewport" content="width=device-width,initial-scale=1"/>
+	<link rel="stylesheet" href="{{ url_for('static', filename= 'style.css') }}"/>
+	<link rel="apple-touch-icon" href="{{ url_for('static', filename= 'assets/favicon.png') }}">
+	
+	<body>
+		<header class="untouchable">
+			<a href="/{{ group }}" class="half navigate">{{ group.replace('-',' ').title() }}</a>
+			<form action="/search" method="POST" class="half search">
+				<input type="text" onchange="this.form.submit()" name="query" placeholder="Search" class="box">
+			</form>
+		</header>
+
+		<section class="untouchable">
+			<h1>{{ member }}</h1>
+		</section>
+
+ 		<form action="/save/{{ group }}/{{ member.lower() }}" method="POST" class="metrics editable">
+			<input type="submit" value="Done" class="done">
+			<div class="metric">
+				<input type="text" name="shirt" placeholder="?" value="{{ metrics[0] }}">
+				<span>Shirt</span>
+			</div>
+			<div class="metric">
+				<input type="text" name="pants" placeholder="?" value="{{ metrics[1] }}">
+				<span>Pants</span>
+			</div>
+			<div class="metric">
+				<input type="text" name="shoes" placeholder="?" value="{{ metrics[2] }}">
+				<span>Shoes</span>
+			</div>
+		</form>
+
+		<section>
+			<form action="/add/{{ group }}/{{ member.lower() }}" method="POST" class="insert">
+				<input type="submit" value="Add" class="add disabled" id="adder">
+				<input type="text" onchange="this.form.submit()" onclick="addtivate()" name="new_item" placeholder="Add a new item">
+			</form>
+
+			<ul class="wishlist">
+				{% if wishlist %}
+					{% for item in wishlist %}
+					<li class="{% if item[:6] == '@done:' %}checked{% else %}delete{% endif %}">
+						<a href="/{% if item[:6] == '@done:' %}toggle{% else %}delete{% endif %}/{{ group }}/{{ member.lower() }}/{{ item.replace('/','zzz').replace(' ','%20') }}" class="toggle">X</a>
+						<span>{% if item[:6] == '@done:' %}{{ item[6:] }}{% else %}{{ item }}{% endif %}</span>
+					</li>
+					{% endfor %}
+				{% endif %}
+			</ul>
+
+		</section>
+
+	</body>
+
+	<script type="text/javascript">
+		function addtivate() {
+			var adder = document.getElementById('adder');
+			adder.className -= ' disabled';
+			adder.className += ' add'
+		}
+
+	</script>
+
+</html>
