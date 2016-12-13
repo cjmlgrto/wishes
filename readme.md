@@ -1,6 +1,6 @@
 # ★ Wishes
 
-![Screen shot of the webapp](https://raw.githubusercontent.com/cjmlgrto/wishes/master/static/assets/screenshot.png)
+<img src="https://raw.githubusercontent.com/cjmlgrto/wishes/master/static/assets/screenshot.png" width="320"/>
 
 **Problem**: So you've organised a kris-kringle with your entire extended family. You already know who you're buying a gift for— *but you don't know what they want*! Also, you have an idea of *you yourself* want. You wanna make sure people are buying the right things for each other.
 
