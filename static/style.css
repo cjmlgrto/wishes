@@ -1,0 +1,304 @@
+html, body, div, header, section, form, input, a, ul, li, h1, input {
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+	font-size: 22px;
+	-webkit-font-smoothing: antialiased;
+	font-family: -apple-system, sans-serif;
+}
+
+a, a:active, a:visited {
+	color: #43BF77;
+	font-weight: 500;
+	text-decoration: none;
+}
+
+input {
+	border: none;
+	outline: none;
+}
+
+ul {
+	list-style: none;
+}
+
+h1 {
+	font-size: 44px;
+	line-height: 1;
+	font-weight: 800;
+}
+
+.half {
+	width: 47%;
+	margin-right: 4%;
+	vertical-align: top;
+	display: inline-block;
+}
+
+.half:nth-child(even) {
+	margin-right: 0;
+}
+
+header {
+	padding: 16px;
+}
+
+section {
+	margin-top: 16px;
+	padding: 0 16px;
+}
+
+.logo {
+	min-height: 32px;
+	font-size: 20px;
+	padding: 6px 0 0 40px;
+	vertical-align: middle;
+	background-repeat: no-repeat;
+	background-image: url(assets/star.svg);
+}
+
+.navigate {
+	min-height: 32px;
+	font-size: 20px;
+	padding: 6px 0 0 24px;
+	vertical-align: middle;
+	background-repeat: no-repeat;
+	background-image: url(assets/back.svg);
+}
+
+.search {
+	margin-top: -6px;
+	padding: 10px;
+	border-radius: 8px;
+	background-color: #EFEFEF;
+	background-repeat: no-repeat;
+	background-position: 10px 13px;
+	background-image: url(assets/search.svg);
+}
+
+.search .box {
+	width: calc(100% - 28px);
+	font-size: 20px;
+	margin-left: 28px;
+	font-weight: 500;
+	background-color: #EFEFEF;
+}
+
+.search .box::-webkit-input-placeholder {
+	top: 3px;
+	position: relative;
+}
+
+.group {
+	margin-bottom: 32px;
+}
+
+.group span {
+	font-weight: 600;
+}
+
+.tile {
+	width: 100%;
+	padding: 50% 0;
+	overflow: hidden;
+	border-radius: 8px;
+	margin-bottom: 8px;
+	position: relative;
+	background-color: #EFEFEF;
+}
+
+.tile ul {
+	top: 8px;
+	left: 8px;
+	color: #333;
+	font-size: 13px;
+	position: absolute;
+	font-weight: normal;
+}
+
+.tile ul li {
+	margin-bottom: 4px;
+}
+
+.members {
+	margin-bottom: 32px;
+}
+
+.members li {
+	border-bottom: 1px solid #DBDBDB;
+}
+
+.members li a {
+	display: block;
+	padding: 14px 0;
+	background-position: right;
+	background-repeat: no-repeat;
+	background-image: url(assets/forward.svg);
+}
+
+.metrics {
+	margin-top: 16px;
+	font-weight: 500;
+	padding: 8px 16px;
+	background-color: #EFEFEF;
+	position: relative;
+}
+
+.metric {
+	width: 25%;
+	margin-right: 5%;
+	display: inline-block;
+}
+
+.metrics span {
+	color: #8E8E93;
+	display: block;
+}
+
+.metrics .value {
+	color: #333;
+	padding: 0 0 4px;
+	margin-bottom: 8px;
+}
+
+.edit {
+	top: -38px;
+	right: 16px;
+	font-size: 20px;
+	font-weight: 500;
+	position: absolute;
+	background-color: transparent;
+}
+
+.editable {
+	background-color: #43BF77;
+}
+.editable .done {
+	top: -38px;
+	right: 16px;
+	font-size: 20px;
+	font-weight: 500;
+	position: absolute;
+	color: #43BF77;
+	background-color: transparent;
+}
+
+.editable input[type="text"] {
+	width: 100%;
+	color: white;
+	font-size: 22px;
+	padding: 0 0 4px;
+	font-weight: 500;
+	margin-bottom: 4px;
+	background-color: #43BF77;
+}
+
+.editable span {
+	color: #0A5A2C;
+}
+
+.editable input[type="text"]::-webkit-input-placeholder {
+	top: 3px;
+	position: relative;
+	color: rgba(255,255,255,0.75);
+}
+
+.wishlist {
+	margin-bottom: 32px;
+}
+
+.wishlist li span {
+	width: 80%;
+	padding: 14px 0;
+	line-height: 1.2;
+	vertical-align: top;
+	display: inline-block;
+	border-bottom: 1px solid #DBDBDB;
+}
+
+.wishlist li a {
+	top: 12px;
+	width: 32px;
+	height: 32px;
+	position: relative;
+	margin-right: 16px;
+	border-radius: 16px;
+	text-indent: -999em;
+	vertical-align: top;
+	display: inline-block;
+}
+
+.unchecked a {
+	border: 2px solid #C7C7CC;
+}
+
+.checked a {
+	background-color: #333;
+	border: 2px solid #C7C7CC;
+	box-shadow: 0 0 0 3px #FFF inset;
+}
+
+.checked span {
+	text-decoration: line-through;
+	color: #8E8E93;
+}
+
+.delete a {
+	border: 2px solid #FA124F;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url(assets/delete.svg);
+}
+
+.insert .add {
+	width: 32px;
+	height: 32px;
+	top: 12px;
+	margin-right: 16px;
+	position: relative;
+	border-radius: 16px;
+	vertical-align: top;
+	text-indent: -999rem;
+	display: inline-block;
+	background-color: white;
+	border: 2px solid #43BF77;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url(assets/add.svg);
+}
+
+.insert input[type="text"] {
+	width: 80%;
+	padding: 14px 0;
+	font-size: 22px;
+	border-bottom: 1px solid #DBDBDB;
+	border-radius: 0;
+}
+
+.insert input[type="text"]::-webkit-input-placeholder {
+	top: 2px;
+	color: #43BF77;
+	font-weight: 500;
+	position: relative;
+}
+
+.untouchable {
+	opacity: 0.25;
+	user-select: none;
+}
+
+.help p {
+	text-align: center;
+	font-size: 14px;
+	line-height: 1.5;
+	margin-bottom: 32px;
+}
+
+.disabled {
+	opacity: 0.25;
+}

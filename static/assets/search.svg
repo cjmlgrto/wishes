@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Family" transform="translate(-178.000000, -22.000000)" fill="#333333">
+            <g id="Top-Bar" transform="translate(16.000000, 10.000000)">
+                <g id="Search" transform="translate(152.000000, 0.000000)">
+                    <path d="M22.9056439,26.3198574 C21.5509601,27.3729184 19.8487115,28 18,28 C13.581722,28 10,24.418278 10,20 C10,15.581722 13.581722,12 18,12 C22.418278,12 26,15.581722 26,20 C26,21.8487115 25.3729184,23.5509601 24.3198574,24.9056439 L28.8305271,29.4163136 C29.2198916,29.8056781 29.2216741,30.4351802 28.8284271,30.8284271 C28.4379028,31.2189514 27.8009753,31.2151889 27.4163136,30.8305271 L22.9056439,26.3198574 Z M18,26 C21.3137085,26 24,23.3137085 24,20 C24,16.6862915 21.3137085,14 18,14 C14.6862915,14 12,16.6862915 12,20 C12,23.3137085 14.6862915,26 18,26 Z" id="Combined-Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

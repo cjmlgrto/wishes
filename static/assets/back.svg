@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="31px" viewBox="0 0 18 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Family" transform="translate(-16.000000, -16.000000)" fill="#43BF77">
+            <g id="Top-Bar" transform="translate(0.000000, 10.000000)">
+                <g id="Back" transform="translate(0.000000, 6.000000)">
+                    <g id="Back-Button" transform="translate(16.000000, 0.000000)">
+                        <path d="M5.14175782,5.13924038 C5.5016327,4.77901336 5.9982337,4.55634919 6.54750418,4.55634919 L24.5651942,4.55634919 C25.6648787,4.55634919 26.5563492,5.44407883 26.5563492,6.55634919 C26.5563492,7.66091869 25.6666752,8.55634919 24.5651942,8.55634919 L8.55634919,8.55634919 L8.55634919,24.5651942 C8.55634919,25.6648787 7.66861954,26.5563492 6.55634919,26.5563492 C5.45177969,26.5563492 4.55634919,25.6666752 4.55634919,24.5651942 L4.55634919,6.54750418 C4.55634919,5.99911755 4.77710808,5.50250919 5.13638389,5.14240964 Z" id="Combined-Shape" transform="translate(15.556349, 15.556349) rotate(-45.000000) translate(-15.556349, -15.556349) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
