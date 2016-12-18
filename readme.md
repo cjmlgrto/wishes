@@ -15,3 +15,31 @@
 ### How to Run
 
 - Execute `app.py`. If you're using bash, run `python app.py`.
+
+### How to Deploy
+
+- Create a Heroku account if you haven't already
+- Follow the short video tutorial over at [heroku.com/python](https://www.heroku.com/python)
+- Install the [Clear DB MySQL](https://devcenter.heroku.com/articles/cleardb) Add-on
+- Replace the following line in `models.py`:
+
+```python
+db = SqliteDatabase('members.db')
+```
+
+- With the following line:
+
+```python
+import os
+
+DB_URL = os.environ['CLEARDB_DATABASE_URL']
+DB = DB_URL[65:]
+HOST = DB_URL[32:64]
+USER = DB_URL[8:22]
+PWD = DB_URL[23:31]
+
+db = MySQLDatabase(DB, host=HOST, port=3306, user=USER, passwd=PWD)
+```
+
+- Push the changes to Heroku using `git push heroku master`
+- If you want to change the family members, replace the `groups` dictionary in `app.py`.
