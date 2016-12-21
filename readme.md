@@ -27,7 +27,7 @@
 db = SqliteDatabase('members.db')
 ```
 
-- With the following line:
+- With the following lines:
 
 ```python
 import os
